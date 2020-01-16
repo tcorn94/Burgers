@@ -1,0 +1,44 @@
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+h1{
+  color: salmon;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+
+
+div{
+  text-align: center;
+  padding: 10px;
+  border-radius: 25px;
+  border: solid, black, 3px;
+  background-color: aliceblue;
+}
+
+button{
+  border-radius: 25px;
+}
+
+img{
+  margin: 0 auto;
+  
+}
