@@ -17,6 +17,8 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/sushi", function(req, res) {
+  console.log("controller");
+  
 sushi.create([
     "name", "devoured"
   ], [

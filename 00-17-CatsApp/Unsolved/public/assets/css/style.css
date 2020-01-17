@@ -20,8 +20,16 @@ h1{
   
 }
 
+h2{
+  color: salmon;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-align: center;
+  
+}
+
 .form-group {
   margin-bottom: 5px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 
@@ -36,6 +44,8 @@ div{
 
 button{
   border-radius: 25px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ 
 }
 
 .container{
@@ -43,5 +53,22 @@ button{
   height: 200px;
   margin: 0 auto;
   text-align: center;
+  background-color: white;
+}
+
+.create-form{
+  align-content: center;
+  width: 80px;
+  height: 40px;
+}
+
+ul{
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.subbtn{
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
   background-color: white;
 }

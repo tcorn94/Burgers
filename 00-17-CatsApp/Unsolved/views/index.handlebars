@@ -6,7 +6,7 @@
 </div>
 	<h1>Clean Plate Club of Sushi</h1>
 <ul>
-  {{#each sushi}}
+  {{#each sushis}}
     {{#unless devoured}}
       {{> sushi/sushi-block devoured=true}}
     {{/unless}}
@@ -17,7 +17,7 @@
   <h1>Sushi Creations</h1>
 
 <ul>
-  {{#each sushi}}
+  {{#each sushis}}
     {{#if devoured}}
       {{> sushi/sushi-block devoured=false}}
     {{/if}}
@@ -25,7 +25,7 @@
 </ul>
 
 <h2>Create Sushi</h2>
-<form class="create-form">
+<form>
 
   <div class="form-group">
     <label for="ca">Sushi creation:</label>
@@ -37,6 +37,7 @@
     <input type="radio" name="devoured" value="1" checked> Eaten?<br>
     <input type="radio" name="devoured" value="0"> Ready-to-eat?
   </div>
-
-  <button type="submit">Add Creation!</button>
+  <div class="subbtn">
+  <button class="create-form" type="submit">Add Creation!</button>
+  </div>
 </form>

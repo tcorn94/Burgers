@@ -21,7 +21,7 @@ $(function() {
     );
   });
 
-  $(".create-form").on("submit", function(event) {
+  $(".create-form").on("click", function(event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
 
@@ -30,6 +30,7 @@ $(function() {
       devoured: $("[name=devoured]:checked").val().trim()
     };
   
+    console.log("sent");
 
     // Send the POST request.
     $.ajax("/api/sushi", {
@@ -48,7 +49,7 @@ $(function() {
     var id = $(this).data("id");
 
   // Send the POST request.
-  $.ajax("/api/sushi" + id, {
+  $.ajax("/api/sushi/" + id, {
     type: "DELETE"
   }).then(
     function() {

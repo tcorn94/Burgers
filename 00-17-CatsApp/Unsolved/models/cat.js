@@ -1,5 +1,5 @@
 // Import the ORM to create functions that will interact with the database.
-var orm = require("../config/orm.js");
+var orm = require("../config/orm");
 
 var sushi = {
   all: function(cb) {
@@ -9,6 +9,8 @@ var sushi = {
   },
   // The variables cols and vals are arrays.
   create: function(cols, vals, cb) {
+    console.log("model");
+    
     orm.create("sushi", cols, vals, function(res) {
       cb(res);
     });
