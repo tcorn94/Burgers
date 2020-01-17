@@ -1,21 +1,25 @@
+<div class="container">
+
 <h1>Sushi!</h1>
 
-<h1>Sushi Creations</h1>
-
+		<img src="https://is1-ssl.mzstatic.com/image/thumb/Purple128/v4/3c/08/73/3c0873e0-cb69-b97f-2bab-002dff19da6b/source/256x256bb.jpg" alt="Sushi" height="100" width="100">
+</div>
+	<h1>Clean Plate Club of Sushi</h1>
 <ul>
-  {{#each cats}}
-    {{#unless sleepy}}
-      {{> cats/cat-block sleep=true}}
+  {{#each sushi}}
+    {{#unless devoured}}
+      {{> sushi/sushi-block devoured=true}}
     {{/unless}}
   {{/each}}
 </ul>
 
-	<h1>Clean Plate Club of Sushi</h1>
+
+  <h1>Sushi Creations</h1>
 
 <ul>
-  {{#each cats}}
-    {{#if sleepy}}
-      {{> cats/cat-block sleep=false}}
+  {{#each sushi}}
+    {{#if devoured}}
+      {{> sushi/sushi-block devoured=false}}
     {{/if}}
   {{/each}}
 </ul>
@@ -29,9 +33,9 @@
   </div>
 
   <div class="form-group">
-    <label for="slee">Have you tried your masterpiece before?</label><br>
-    <input type="radio" name="sleepy" value="1" checked> Eaten?<br>
-    <input type="radio" name="sleepy" value="0"> Ready-to-eat?
+    <label for="devoured">Have you tried your masterpiece before?</label><br>
+    <input type="radio" name="devoured" value="1" checked> Eaten?<br>
+    <input type="radio" name="devoured" value="0"> Ready-to-eat?
   </div>
 
   <button type="submit">Add Creation!</button>

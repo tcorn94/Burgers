@@ -3,7 +3,7 @@ var express = require("express");
 var router = express.Router();
 
 // Import the model (cat.js) to use its database functions.
-var sushi = require("../models/cat.js");
+var sushi = require("../models/cat");
 
 // Create all our routes and set up logic within those routes where required.
 router.get("/", function(req, res) {
@@ -16,7 +16,7 @@ router.get("/", function(req, res) {
   });
 });
 
-router.post("/api/cats", function(req, res) {
+router.post("/api/sushi", function(req, res) {
 sushi.create([
     "name", "devoured"
   ], [
@@ -27,7 +27,7 @@ sushi.create([
   });
 });
 
-router.put("/api/cats/:id", function(req, res) {
+router.put("/api/sushi/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
   console.log("condition", condition);
@@ -44,15 +44,17 @@ router.put("/api/cats/:id", function(req, res) {
   });
 });
 
-router.delete("/api/cats/:id", function(req, res) {
-  var condition = "id =" + req.params.id;
-  sushi.delete(condition, function(result){
-    if(result.affectedRows ==0) {
+router.delete("/api/sushi/:id", function(req, res) {
+  var condition = "id = " + req.params.id;
+
+  sushi.delete(condition, function(result) {
+    if (result.affectedRows == 0) {
+      // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
     } else {
       res.status(200).end();
     }
-    });
+  });
 });
 
 

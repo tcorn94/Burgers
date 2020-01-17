@@ -5,11 +5,11 @@ $(function() {
     var newSleep = $(this).data("newsleep");
 
     var newSleepState = {
-      sleepy: newSleep
+      devoured: newSleep
     };
 
     // Send the PUT request.
-    $.ajax("/api/cats/" + id, {
+    $.ajax("/api/sushi/" + id, {
       type: "PUT",
       data: newSleepState
     }).then(
@@ -27,17 +27,17 @@ $(function() {
 
     var newCat = {
       name: $("#ca").val().trim(),
-      sleepy: $("[name=sleepy]:checked").val().trim()
+      devoured: $("[name=devoured]:checked").val().trim()
     };
   
 
     // Send the POST request.
-    $.ajax("/api/cats", {
+    $.ajax("/api/sushi", {
       type: "POST",
       data: newCat
     }).then(
       function() {
-        console.log("created new cat");
+        console.log("created new sushi");
         // Reload the page to get the updated list
         location.reload();
       }
@@ -48,11 +48,11 @@ $(function() {
     var id = $(this).data("id");
 
   // Send the POST request.
-  $.ajax("/api/cats" + id, {
+  $.ajax("/api/sushi" + id, {
     type: "DELETE"
   }).then(
     function() {
-      console.log("deleted cat", id);
+      console.log("deleted sushi", id);
       // Reload the page to get the updated list
       location.reload();
     }
