@@ -3,5 +3,5 @@ create new items in a list (in this case sushi), and optionally delete/devour
 these created items.
 
 
-Github:
+Github:https://tcorn94.github.io/Burgers/
 Heroku: 
